@@ -1,7 +1,5 @@
 <template>
   <Navbar_mark />
-  <!-- <Main_header /> -->
-  <!-- <ProductPage :productFilter="productFilter" /> -->
   <router-view :productFilter="productFilter"></router-view>
   <Border_mark />
   <Footer_Head />
@@ -125,6 +123,7 @@ body {
   max-width: 1600px;
   margin: 0 auto;
 }
+
 /* -----------------------ProHeadeing---------------- */
 #proheading {
   margin-top: 10px;
@@ -173,6 +172,7 @@ body {
 }
 
 @media (max-width: 767px) {
+  
   .header {
     justify-content: center;
   }
@@ -194,10 +194,49 @@ body {
     height: 100vh;
     background-color: #05040445;
   }
-  
+   
+   /* .nav_links {
+    z-index: 35;
+ 
+    display: flex;
+    flex-direction: row;
+    position: absolute;
+    top: 14vh;
+    background-color: #272727d1;
+    transform: translateX(-100vw);
+    transition: all 0.5s ease-in-out;
+    width: 100%;
+     top: -16px;
+    left: 0;
+  }
   .active {
     transform: translateX(0vw);
   }
+  .navlinktransition{
+      transform: translateX(-100vw);
+    transition: all 0.5s ease-in-out;
+  } */
+/* .filters {
+    display: flex;
+    padding: 0px;
+    width: 100%;
+    z-index: 2;
+    position: fixed;
+    bottom: 0;
+    background-color: white;
+    justify-content: space-evenly;
+} */
+
+
+
+
+
+
+
+
+
+
+
 
   .nav_links ul {
     margin: 24px;

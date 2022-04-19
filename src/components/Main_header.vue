@@ -1,4 +1,5 @@
 <template>
+
   <div class="main_header">
     <!-- ---------------Nav bar for media queri------------------ -->
     <!-- hamburger menu--------------------- -->
@@ -211,7 +212,8 @@ export default  {
 };
 </script>
 
-<style scoped>
+<style>
+
 .fade-enter-active,
 .fade-leave-active {
   transition: opacity 0.5s;
@@ -317,6 +319,10 @@ svg {
   .header {
     justify-content: center;
   }
+  .left1 ul li {
+  list-style: none;
+  padding: 0px 0px;}
+
   .main_header {
     z-index: 1;
     background-color: white;
@@ -341,9 +347,9 @@ svg {
     height: 100vh;
     background-color: #05040445;
   }
-  .nav_links {
-    z-index: 22222;
-    /* justify-content: center; */
+  /* .nav_links {
+    z-index: 35;
+ 
     display: flex;
     flex-direction: row;
     position: absolute;
@@ -361,7 +367,7 @@ svg {
   .navlinktransition{
       transform: translateX(-100vw);
     transition: all 0.5s ease-in-out;
-  }
+  } */
 
   .nav_links ul {
        margin: 4px 15px;
