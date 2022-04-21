@@ -401,11 +401,12 @@
           </h3>
         </div>
       </div>
-
+    
       <div class="api_products" :disabled="loading">
-        <div v-for="item in list" :key="item.id" class="api_products_img">
-          <div class="productImg">
+        <div v-for="item in list" :key="item.id_product" class="api_products_img">
+        <div class="productImg" >
             <img :src="item.image" />
+            <div class="view-product" @click="viewproduct(item.id_product)"><router-link :to="`/product/${item.url_key}`">VIEW PRODUCT</router-link></div>
             <div class="productsSpecs">
               <h4>{{ item.name }}</h4>
               <span>Rs{{ item.selling_price }}</span>
@@ -551,7 +552,7 @@ export default {
       this.productsSort = data.data.result.sort;
       this.productCount = data.data.result.count;
       this.productName = data.data.result.name;
-      console.log("after-after");
+      console.log("list product" ,this.list);
     },
 
     sortingdatabyfilter(checked, value, code) {
@@ -616,6 +617,14 @@ export default {
 
       this.productInfoData();
     },
+  viewproduct(id_product){
+    console.log("thisn is a product id",id_product)
+    // this.$router.push("/product/:item.id_product" ,id_product);
+  }
+
+
+
+
   },
 
   mounted() {
@@ -727,6 +736,62 @@ svg {
   margin: 0px 17px;
   cursor: pointer;
 }
+.view-product a{
+   color: #ffffff;
+   text-decoration: none;
+}
+.view-product{
+      position: relative;
+    left: 0vw;
+    bottom: 4vw;
+    background-color: #ff0000;
+    display: flex;
+    align-items: baseline;
+    justify-content: center;
+    color: #ffffff;
+    padding: 7px 0px;
+    transform: translateY(3vh);
+    cursor: pointer;
+    transition: all 0.3s ease-in;
+}
+.view-product:hover{
+  transform: translateY(0vh);
+}
+@media only screen and (max-width: 1024px) and (min-width: 768px) {
+.left1 ul li {
+       list-style: none;
+    max-width: 43%;
+    padding: 8px 7px;
+}
+
+.left1 ul li a {
+    font-family: "Jost* 600 Semi";
+    font-weight: bold;
+    text-decoration: none;
+    color: #303030;
+    font-weight: 300;
+    font-size: 9px;
+}
+.right1 ul li a {
+    font-family: "Jost* 600 Semi";
+    font-weight: bold;
+    text-decoration: none;
+    color: #303030;
+    font-size: 9px;
+}
+svg {
+    width: 21px;
+    margin: 0px 8px;
+    cursor: pointer;
+}
+
+}
+
+
+
+
+
+
 @media (max-width: 767px) {
   .header {
     justify-content: center;

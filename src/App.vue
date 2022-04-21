@@ -1,6 +1,7 @@
 <template>
   <Navbar_mark />
   <router-view :productFilter="productFilter"></router-view>
+  
   <Border_mark />
   <Footer_Head />
 </template>
